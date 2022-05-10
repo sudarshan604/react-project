@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./style.css";
 function Component(props) {
   const [isSelect, setSelect] = useState(false);
-  console.log(isSelect);
   function handleClick() {
     setSelect(!isSelect);
   }
@@ -14,7 +13,9 @@ function Component(props) {
           {isSelect ? "-" : "+"}
         </button>
       </header>
-      <p className="answer"> {isSelect ? props.info : ""}</p>
+      <p style={{ display: isSelect ? "block" : "none" }} className="answer">
+        {props.info}
+      </p>
     </div>
   );
 }

@@ -34,4 +34,10 @@ button {
   background: #eae6eb;
   font-size: 32px;
   cursor: pointer;
+  transition: all 3s ease;
+}
+
+button:hover {
+  font-size: 30px;
+  background-color: green;
 }
