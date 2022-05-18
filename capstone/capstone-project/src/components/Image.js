@@ -4,7 +4,7 @@ import { context } from "../Context";
 import PropTypes from "prop-types";
 
 function Image({ className, img }) {
-  const { toggleFavourite, addCardItem } = useContext(context);
+  const { toggleFavourite, cardItem, addCardItem } = useContext(context);
 
   const [isHover, setHover] = useState(false);
   const lineHeart = isHover && (
@@ -31,6 +31,25 @@ function Image({ className, img }) {
       );
     }
   }
+  function cartIcon() {
+    const fillCart = cardItem.some((photo) => photo.id === img.id);
+    if (fillCart) {
+      return (
+        <i
+          className="ri-add-circle-fill cart"
+          onClick={() => addCardItem(img)}
+        ></i>
+      );
+    } else if (isHover) {
+      return (
+        <i
+          className="ri-add-circle-line cart"
+          onClick={() => addCardItem(img)}
+        ></i>
+      );
+    }
+  }
+
   return (
     <div
       onMouseEnter={() => setHover(true)}
@@ -38,12 +57,8 @@ function Image({ className, img }) {
       className={`${className}  image-container`}
     >
       {heartIcon()}
-      {isHover && (
-        <i
-          className="ri-add-circle-line cart"
-          onClick={() => addCardItem(img)}
-        ></i>
-      )}
+      {cartIcon()}
+
       <img src={img.url} className="image-grid" alt="" />
     </div>
   );

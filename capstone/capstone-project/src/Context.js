@@ -20,9 +20,23 @@ function UserContextProvider(props) {
   }
 
   function addCardItem(newItem) {
-    setCardItem((prev) => [...prev, newItem]);
+    const isCardConten = cardItem.some((card) => card.id === newItem.id);
+    if (isCardConten) {
+      const newCard = cardItem.filter((card) => card.id !== newItem.id);
+      // console.log([newCard]);
+      setCardItem(newCard);
+    } else {
+      setCardItem((prev) => [...prev, newItem]);
+    }
   }
 
+  function removeCartItem(item) {
+    const newCartItem = cardItem.filter((card) => card.id !== item.id);
+    setCardItem(newCartItem);
+  }
+  function emptyCart() {
+    setCardItem([]);
+  }
   useEffect(() => {
     let url =
       "https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json";
@@ -32,7 +46,16 @@ function UserContextProvider(props) {
   }, []);
 
   return (
-    <context.Provider value={{ allPhotos, toggleFavourite, addCardItem }}>
+    <context.Provider
+      value={{
+        allPhotos,
+        cardItem,
+        toggleFavourite,
+        addCardItem,
+        removeCartItem,
+        emptyCart,
+      }}
+    >
       {props.children}
     </context.Provider>
   );
