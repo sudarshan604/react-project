@@ -22,14 +22,20 @@ function Cart() {
       emptyCart();
     }, 3000);
   }
-
+  const btnStyle = {
+    display: cardItem.length === 0 && "none",
+  };
   return (
     <main className="cart-page">
       <h1>check out</h1>
       {CartItemProduct}
-      <p className="total-cost">Total:{totalCost}</p>
+      <p className="total-cost" style={btnStyle}>
+        Total:{totalCost}
+      </p>
       <div className="order-button">
-        <button onClick={orderItem}>{order}</button>
+        <button onClick={orderItem} style={btnStyle}>
+          {order}
+        </button>
       </div>
     </main>
   );
