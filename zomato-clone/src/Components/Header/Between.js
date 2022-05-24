@@ -1,13 +1,14 @@
 import "../../style.css";
+import React from "react";
 
 function Between() {
   return (
-    <section className="nav-background">
-      <h3>Discover the best food & drinks in Motihari</h3>
+    <div className="nav-background ">
+      <h2>Discover the best food & drinks in Motihari</h2>
       <div className="search-bar">
-        <input type="text"></input>
+        <input type="text" />
       </div>
-    </section>
+    </div>
   );
 }
 

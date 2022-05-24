@@ -14,8 +14,43 @@ function App() {
       >
         <Header />
         <Between />
-        <FoodCollection />
       </div>
+      <FoodCollection />
+      <section className="localities">
+        <h2>Popular Localities in and around Motihari</h2>
+        <div>
+          <h2>Motihari Locaility</h2>
+          <p>127 places</p>
+        </div>
+      </section>
+      <section className="app">
+        <img
+          src="https://b.zmtcdn.com/data/o2_assets/a500ffc2ab483bc6a550aa635f4e55531648107832.png"
+          alt="mobile phone"
+        />
+        <aside>
+          <h2>Get the Zomato App</h2>
+          <p>
+            We will send you a link, open it on your phone to download the app
+          </p>
+          <div>
+            <label>
+              <input type="radio" />
+              Email
+            </label>
+            <label>
+              Phone
+              <input type="radio" />
+            </label>
+          </div>
+          <label>
+            <input type="text" />
+            share App Link
+          </label>
+
+          <p>Download app from</p>
+        </aside>
+      </section>
     </div>
   );
 }

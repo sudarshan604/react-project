@@ -18,4 +18,10 @@ export default [
     totalPlace: "7place",
     RestruantType: "Pocket Friendly",
   },
+  {
+    id: "1",
+    image: "images/Family.jpeg",
+    totalPlace: "7place",
+    RestruantType: "Pocket Friendly",
+  },
 ];
