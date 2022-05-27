@@ -19,10 +19,10 @@ function Coursoul() {
             alt=""
           />
           <div className="bottom-text">
-            <i class="ri-play-circle-line"></i>
+            <span class="ri-play-circle-line circle-play"></span>
             <div>
               <h3>'Thor:Love and Thunder' 2:16</h3>
-              <p>Watch the new Trailer</p>
+              <p className="z">Watch the new Trailer</p>
             </div>
           </div>
         </div>

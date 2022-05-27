@@ -7,6 +7,7 @@ function Navabar() {
         <div className="imd-name">IMDb</div>
         <div className="search-bar">
           <input type="text" />
+          <span class="ri-search-line searchicon"></span>
         </div>
         <p className="imdb hover">
           IMDb <span>pro</span>

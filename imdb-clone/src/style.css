@@ -548,3 +548,22 @@ div button:hover {
   display: flex;
   gap: 20px;
 }
+.searchicon {
+  font-size: 23px;
+  margin-left: auto;
+  margin-right: 3px;
+  color: #000;
+}
+.searchicon:hover {
+  cursor: pointer;
+}
+.imdb span {
+  font-weight: 900;
+  color: #f5c518;
+}
+.circle-play {
+  font-size: 50px;
+}
+.bottom-text {
+  padding-bottom: 30px;
+}
