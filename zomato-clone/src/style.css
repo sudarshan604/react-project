@@ -1,0 +1,273 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+nav {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.app-name {
+  margin-right: auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  font-size: 18px;
+  padding: 8px;
+  margin: 0 10px;
+}
+li h2 {
+  margin-top: 0px;
+}
+.link {
+  text-decoration: none;
+  color: red;
+}
+
+.nav-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  font-size: 30px;
+  color: white;
+}
+.nav-background h3 {
+  margin: 40px 0;
+}
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid red; */
+}
+.search-bar {
+  padding: 10px 0;
+  width: 30%;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  display: flex;
+}
+
+.header {
+  padding-bottom: 15%;
+  background-size: cover;
+}
+
+.upper-card {
+  width: 454px;
+  margin-top: 30px;
+  background: #eee;
+  box-shadow: 0 8px 8px -4px lightblue;
+  transition: all 0.3s;
+}
+.upper-card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+div .title {
+  font-weight: 200;
+  margin-bottom: 0;
+}
+.image-desp {
+  margin-top: -20px;
+  background-color: white;
+  padding: 10px;
+}
+div .description {
+  font-weight: 300;
+  margin-top: 2px;
+  font-weight: 200;
+  color: gray;
+}
+.upper-card:hover,
+.upper-card:focus {
+  transform: scale(1.1);
+}
+
+.wrapper,
+.localities {
+  width: 70%;
+  margin: 0 auto;
+}
+.Food-collection {
+  display: flex;
+  margin-top: 40px;
+}
+.image-prof {
+  margin-right: 20px;
+  width: 267px;
+  height: 320px;
+  position: relative;
+}
+.image-prof img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.middle-comp {
+  margin: 100px 0px;
+}
+
+.middle-comp p,
+.middle-comp h2 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.middle-comp h2 {
+  font-weight: 300;
+  font-size: 32px;
+}
+.review,
+.plate {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.plate {
+  position: absolute;
+  bottom: 3px;
+  left: 10px;
+}
+
+.localities div {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 300px;
+  min-width: 150px;
+  padding: 0 12px;
+  margin-top: 70px;
+  margin-bottom: 200px;
+}
+.localities div h2 {
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: -12px;
+}
+.localities div p {
+  font-weight: 500;
+  color: gray;
+}
+.localities div:hover {
+  box-shadow: 1px 1px 3px lightgray;
+}
+.app {
+  background-color: #fffbf7;
+  /* margin-bottom: 300px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0px;
+  height: 450px;
+}
+
+.app img {
+  height: 290px;
+  width: 290px;
+}
+aside {
+  height: 400px;
+}
+aside h2 {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  font-weight: 300;
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+.footer-image img {
+  width: 137px;
+  height: 40px;
+  margin: 0px 12px;
+  margin-left: 0px;
+}
+.frequently-card {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 400px;
+}
+
+.freq-comp {
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+.freq-comp p {
+  font-size: 20px;
+  color: #1c1c1c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px;
+  grid-template-rows: auto auto auto auto auto auto;
+}
+
+.menu {
+  display: none;
+}
+
+.checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 6;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hamburger-lines .lines {
+  display: block;
+  height: 4px;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  transition: all 3s;
+}
+
+.hamburger-lines:hover {
+  cursor: pointer;
+}
+.hamburger-lines .lines1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+input[type="checkbox"]:checked ~ .lines1 {
+  transform: rotate(45deg);
+}

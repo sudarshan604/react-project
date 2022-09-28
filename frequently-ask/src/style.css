@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  background-color: lavender;
+  max-width: 800px;
+  padding: 0 20px;
+  padding-bottom: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin: 0;
+  text-transform: capitalize;
+}
+.heading {
+  display: flex;
+  gap: 500px;
+}
+
+p {
+  padding: 12px;
+}
+
+button {
+  /* border: none; */
+  font-weight: 200;
+  background: transparent;
+  border-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #eae6eb;
+  font-size: 32px;
+  cursor: pointer;
+  transition: all 3s ease;
+}
+
+button:hover {
+  font-size: 30px;
+  background-color: green;
+}
