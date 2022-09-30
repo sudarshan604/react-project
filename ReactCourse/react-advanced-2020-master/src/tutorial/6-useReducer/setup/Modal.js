@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 
 const Modal = () => {
-  return <div>i'm modal</div>;
+  return <h2> i am modal</h2>;
 };
 
 export default Modal;
