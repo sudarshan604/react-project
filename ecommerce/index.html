@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
     <title>books</title>
-  </head>
+<script type="module" src="./script.js"></script>
+<script type="module" src="./item.js"></script>
+
+</head>
   <body>
     <header>
       <nav>
@@ -60,7 +63,7 @@
           <p>old book store</p>
         </div>
         <div class="home">
-          <button class="cart-button">
+          <button id="cardToggle" class="cart-button" onClick="toggleCart()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -77,7 +80,7 @@
             </svg>
           </button>
    <p class="product-count">2</p>         
-          <div class="cart-list">
+          <div data-cart-list class="cart-list">
                <div class="cart-item">
                 <img src="image/book1.jpg">
                 <div class="product-detail">
@@ -127,56 +130,42 @@
       </div>
       <section class="wrap all-category-books">
         <h2>books list</h2>
-        <div class="all-list">
-          <article class="book-component">
-            <img class="book-article-img" src="image/book1.jpg" alt="" />
-            <p>Rs 2000</p>
-          </article>
-          <article class="book-component">
-            <img class="book-article-img" src="image/book1.jpg" alt="" />
-            <p>Rs 2000</p>
-          </article>
-          <article class="book-component">
-            <img class="book-article-img" src="image/book1.jpg" alt="" />
-            <p>Rs 2000</p>
-          </article>
-          <article class="book-component">
-            <img class="book-article-img" src="image/book1.jpg" alt="" />
-            <p>Rs 2000</p>
-          </article>
-          <button class="btn-left">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </button>
-          <button class="btn-right">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </button>
+       <div class="all-list-parent">
+        <div data-small-book-list class="all-list">
         </div>
+        <button data-btn-left class="btn-left">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </button>
+        <button data-btn-right class="btn-right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+      </div>
       </section>
 
       <section class="wrap books-by-category">
@@ -234,5 +223,24 @@
 
       </section>
     </main>
+ 
+<template data-book-component>
+  <article class="book-component">
+    <img data-img-small class="book-article-img" src="image/book1.jpg" alt="" />
+    <p data-price></p>
+  
+  
+  </article>
+
+</template>
+
+<script>
+  const invisibleList=document.querySelector('[data-cart-list]')
+
+ function toggleCart(){
+   invisibleList.classList.toggle('invisible')
+ }
+
+</script>
   </body>
 </html>

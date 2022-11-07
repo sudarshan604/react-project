@@ -4,12 +4,94 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style/login.css" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body>
-    <p>this is login page</p>
-    <form action="./index.html">
-      <button type="submit">login</button>
-    </form>
+    <section class="hello">
+      <article class="form-box">
+        <div class="btn-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">Login</button>
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            Register
+          </button>
+        </div>
+
+        <div class="social-icons">
+          <img src="image/fb.png" />
+          <img src="image/gp.png" />
+          <img src="image/tw.png" />
+        </div>
+        <form id="lg" class="frm-gr">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="user id"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            placeholder="enter password"
+            required
+          />
+          <input type="checkbox" class="check-box" /><span
+            >Remember Password</span
+          >
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+
+        <form id="rg" class="frm-gr">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="user id"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            placeholder="enter password"
+            required
+          />
+          <input
+          type="text"
+          class="input-field"
+          placeholder="enter password"
+          required
+        />
+      
+          <input
+            type="email"
+            class="input-field"
+            placeholder="enter email"
+            required
+          />
+          <input type="checkbox" class="check-box" /><span
+            >i agee term and password</span
+          >
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+      </article>
+    </section>
+    
+    <script>
+      var x = document.getElementById("lg");
+      var y = document.getElementById("rg");
+      var z = document.getElementById("btn");
+
+      function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+      }
+    </script>
   </body>
 </html>

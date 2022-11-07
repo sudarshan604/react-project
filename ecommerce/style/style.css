@@ -6,6 +6,10 @@
 body {
   font-family: sans-serif;
 }
+.invisible {
+  display: none;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -13,7 +17,7 @@ nav {
   background-color: black;
   color: #fff;
   padding: 16px;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -130,6 +134,7 @@ nav div,
 }
 .book-background {
   position: relative;
+  /* height: 400px; */
 }
 .middle-section {
   height: 386px;
@@ -205,6 +210,9 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+}
+.all-list-parent {
+  position: relative;
 }
 .btn-left {
   position: absolute;
