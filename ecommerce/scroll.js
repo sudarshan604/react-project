@@ -8,13 +8,22 @@ import items from "./item.js";
 let n = 4;
 let i = 0;
 let np = 0;
-let pp = 0;
+let sw = true;
 let total = items.length;
 export function nextPo() {
   selectBook();
 }
 
 nextButton.addEventListener("click", (e) => {
+  if (sw) {
+    n = 4;
+    i = 0;
+    np = 0;
+    bookList.innerHTML = "";
+    sw = false;
+    selectBook();
+    return;
+  }
   np++;
 
   if (n > total - 1) {
@@ -25,27 +34,29 @@ nextButton.addEventListener("click", (e) => {
     n = n + 1;
     i = np;
   }
-  console.log(n, i);
+
+  console.log("i=", i, "n=", n);
   bookList.innerHTML = "";
 
   selectBook();
 });
 
 previousButton.addEventListener("click", (e) => {
-  pp++;
-  n = total - 4 - pp;
+  n = items.length - 1 - 4;
+  i = items.length - 1;
 
-  if (n < 0 || i < 0) {
-    i = 0;
+  if (n < 1) {
     n = 4;
-    pp = 0;
-    bookList.innerHTML = "";
+    i = 0;
     selectBook();
-    n = total;
+    bookList.innerHTML = "";
     return;
   } else {
-    i = total - pp;
+    i = i - 1;
+    n = n - 1;
   }
+  console.log("n=", n, "i=", i);
+
   bookList.innerHTML = "";
   selectBook("minus");
 });
@@ -63,12 +74,10 @@ function selectBook(op) {
 }
 
 function render(item) {
-  console.log(item);
   const containerBook = wrapperBook.content.cloneNode(true);
 
   const priceRs = containerBook.querySelector("[data-price]");
   const imgBook = containerBook.querySelector("[data-img-small]");
-
   priceRs.innerText = item.price;
 
   imgBook.src = item.image;

@@ -50,7 +50,7 @@ nav div,
 .login p {
   margin-right: 16px;
 }
-.login p:last-child {
+.login a:last-child {
   padding-left: 10px;
   border-left: 2px solid #fff;
 }
@@ -72,10 +72,23 @@ nav div,
   padding: 12px 32px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
+.login {
+  text-decoration: none;
+  color: #fff;
+}
+.login-page {
+  text-decoration: none;
+}
+.login a:visited {
+  color: #fff;
+  text-decoration: none;
+}
 .cart-button {
   position: fixed;
+  top: 100px;
   right: 80px;
   z-index: 1;
   background-color: aliceblue;
@@ -291,4 +304,32 @@ div #btn-cart {
 }
 #btn-cart:hover {
   background-color: aqua;
+}
+
+.btn-right {
+  transition: 0.5s;
+}
+
+.btn-right:hover {
+  transform: scale(1.3) translate(0, -50%);
+}
+.btn-left {
+  transition: 0.3s;
+}
+
+.btn-left:hover {
+  transform: scale(1.3) translate(0, -50%);
+}
+
+.book-component {
+  transition: all 1s ease-out;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.head-section {
+  padding-top: 100px;
+  padding-bottom: 40px;
 }
