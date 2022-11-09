@@ -33,6 +33,7 @@
         <div>contact us:</div>
 
         <div class="login-section">
+          <a class="dash-link" href="./dashboard.htm">
           <span
             >account
             <svg
@@ -51,6 +52,7 @@
               />
             </svg>
           </span>
+        </a>
           <div  class="login">
           
             <a href="./login.html" class="login-page"> <p>login</p></a>
@@ -66,7 +68,7 @@
           <p>old book store</p>
         </div>
         <div class="home">
-          <button id="cardToggle" class="cart-button" onClick="toggleCart()">
+          <button id="cardToggle" class="cart-button" data-toggle-button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -82,28 +84,18 @@
               />
             </svg>
           </button>
-   <p class="product-count">2</p>         
-          <div data-cart-list class="cart-list">
-               <div class="cart-item">
-                <img src="image/book1.jpg">
-                <div class="product-detail">
-                   <p>ikiki<span>x 2</span></p>
-                    <p>Rs300</p>
-                  </div>
-                  <div class="cart-item">
-                   <img src="image/book1.jpg">
-                   <div class="product-detail">
-                      <p>ikiki<span>x 2</span></p>
-                       <p>Rs300</p>
-                     </div>
-               
-            
-                  <div class="total">
-                     <p>TOTAL</p>
-                     <p>Rs600</p>
-                    </div>
-                 </div>
+   <p data-item-count class="product-count">0</p>         
+     
+   <div  data-box-cart class="cart-list">
+     <div data-cart-list> 
+                 
         </div>
+        <div class="total">
+          <p>TOTAL</p>
+          <p>Rs600</p>
+         </div>
+      </div>
+    </div>
       </section>
     </header>
     <main>
@@ -173,53 +165,11 @@
 
       <section class="wrap books-by-category">
         <h3>Books by category</h3>
-        <div class="category-list">
-          <p>All</p>
-          <p>Novel</p>
-          <p>Hitory</p>
+        <div data-cateory-list class="category-list">
+         
         </div>
-      <div class="books-collection">
-         <article class="single-component">
-           <img src="image/book1.jpg"/>              
-         <div class="component-footer">
-          <p>book name</p>
-          <div>
-             <span>Rs 300</span>
-             <button id="btn-cart">Add to cart</button>
-            </div>
-         </div>
-          </article>
-          <article class="single-component">
-           <img src="image/book1.jpg"/>              
-         <div class="component-footer">
-          <p>book name</p>
-          <div>
-             <span>Rs 300</span>
-             <button id="btn-cart">Add to cart</button>
-            </div>
-         </div>
-          </article>
-          <article class="single-component">
-           <img src="image/book1.jpg"/>              
-         <div class="component-footer">
-          <p>book name</p>
-          <div>
-             <span>Rs 300</span>
-             <button id="btn-cart">Add to cart</button>
-            </div>
-         </div>
-          </article>
-          <article class="single-component">
-           <img src="image/book1.jpg"/>              
-         <div class="component-footer">
-          <p>book name</p>
-          <div>
-             <span>Rs 300</span>
-             <button id="btn-cart">Add to cart</button>
-            </div>
-         </div>
-          </article>
-
+      <div data-book-cat-collection class="books-collection">
+        
          
 
       </div>
@@ -236,14 +186,35 @@
   </article>
 
 </template>
+<template data-cat-component >
+  <article class="single-component">
+    <img/>              
+  <div class="component-footer">
+   <p data-book-cat-name></p>
+   <div data-id-container>
+      <span data-book-cat-price>Rs 300</span>
+      <button data-cart-add id="btn-cart">Add to cart</button>
+     </div>
+  </div>
+   </article>
+ 
 
-<script>
-  const invisibleList=document.querySelector('[data-cart-list]')
+</template>
 
- function toggleCart(){
-   invisibleList.classList.toggle('invisible')
- }
+<template data-cart-single-item>
+  <div class="cart-item">
+    <img />
+    <div class="product-detail">
+       <p>ikiki<span data-item-quantity></span></p>
+        <p data-item-price>Rs300</p>
+       
 
-</script>
+      </div>
+    
+
+</template>
+
+
+
   </body>
 </html>

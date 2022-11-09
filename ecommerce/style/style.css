@@ -260,12 +260,14 @@ button {
 }
 .category-list p:hover {
   cursor: pointer;
+  margin-bottom: -6px;
   border-bottom: 6px solid lightblue;
 }
 
 .books-collection {
   margin-top: 30px;
   width: 100%;
+  /* position: absolute; */
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
@@ -332,4 +334,19 @@ nav {
 .head-section {
   padding-top: 100px;
   padding-bottom: 40px;
+}
+.dash-link {
+  text-decoration: none;
+}
+.dash-link:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+.single-component {
+  transition: all 0.3s;
+}
+
+.hidden {
+  display: none;
 }
