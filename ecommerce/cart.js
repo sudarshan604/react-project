@@ -1,5 +1,6 @@
-import data from "./data.js";
 import items from "./data.js";
+
+const totalPrice = document.querySelector("[data-cart-total]");
 
 const cartWholeBox = document.querySelector("[ data-cart-list]");
 const cartBox = document.querySelector("[data-cart-single-item]");
@@ -25,6 +26,13 @@ function renderShoppingCart(id) {
   }
   cartWholeBox.innerHTML = " ";
   shoppingCart.forEach(renderCart);
+
+  //calculating total
+  const totalValue = shoppingCart.reduce((sum, entry) => {
+    const item = items.find((i) => i.id == entry.id);
+    return sum + item.price * entry.quantity;
+  }, 0);
+  totalPrice.innerText = totalValue;
 }
 
 function renderCart(data) {
@@ -44,7 +52,9 @@ function renderCart(data) {
   objectQuantity.innerText = ` x  ${data.quantity}`;
 
   const itemPrice = newAddCartItem.querySelector("[data-item-price]");
-  itemPrice.innerText = data.quantity * slectCartIem.price;
+
+  const itemTotal = data.quantity * slectCartIem.price;
+  itemPrice.innerText = itemTotal;
 
   cartWholeBox.appendChild(newAddCartItem);
 }
