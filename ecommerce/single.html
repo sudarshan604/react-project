@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
      <link href="style/single.css" rel="stylesheet" />
-   </head>
+   <script type="module" src="./single.js" defer></script>
+    </head>
   <body>
     <header>
       <nav>
@@ -56,32 +57,8 @@
       </nav>
     </header>
     <main>
-      <div class="wrap section-collection">
-        <secction class="section-1">
-          <img
-            src="https://books.google.com/books/content?id=ay87zgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-          />
-          <span>share </span>
-         </secction>
-        <secction class="section-2">
-          <h3 class="book-name">The Spanish Love Deception</h3>
-          <p class="author-name"><span>by</span> Elena Armas,</p>
-          <p class="start">synopsis</p>
-          <p class="book-info">A wedding. A trip to Spain. The most infuriating man. And three days of pretending. Or in other words, a plan that will never work. Catalina Martín, finally, not single. Her family is happy to announce that she will bring her American boyfriend to her sister's wedding. Everyone is invited to come and witness the most magical event of the year. That would certainly be tomorrow's headline in the local newspaper of the small Spanish town I came from. Or the epitaph on my tombstone, seeing the turn my life had taken in the span of a ph...
-
-            <p class="read-more">Read moere</p>
-          </p>
-        </secction>
-        <secction class="section-3">
-         <article class="price-info">
-              <h2 class="cost">NPR.798</h2>
-            
-            <p class="delivery">Delivery to most part of nepal</p>
-            <button class="cart">add to cart</button>
-            
-           </article>
-
-        </secction>
+      <div data-wrap-section class="wrap section-collection">
+       
     </div>
        <section class="wrap related-type">
       <h3 class="author-type-book">more by same author</h3>
@@ -148,5 +125,36 @@
    </section>
 
 </footer>
-    </body>
+
+
+<template data-section-collection>
+  <secction class="section-1">
+    <img
+      
+    />
+    <span>share </span>
+   </secction>
+  <secction class="section-2">
+    <h3 data-book-name-page class="book-name"></h3>
+    <p data-author-name class="author-name"><span>by</span> </p>
+    <p class="start">synopsis</p>
+    <p data-book-info class="book-info">A wedding. A trip to Spain. The most infuriating man. And three days of pretending. Or in other words, a plan that will never work. Catalina Martín, finally, not single. Her family is happy to announce that she will bring her American boyfriend to her sister's wedding. Everyone is invited to come and witness the most magical event of the year. That would certainly be tomorrow's headline in the local newspaper of the small Spanish town I came from. Or the epitaph on my tombstone, seeing the turn my life had taken in the span of a ph...
+
+      <p class="read-more">Read moere</p>
+    </p>
+  </secction>
+  <secction class="section-3">
+   <article class="price-info">
+        <h2 data-book-price-page class="cost"></h2>
+      
+      <p class="delivery">Delivery to most part of nepal</p>
+      <button class="cart">add to cart</button>
+      
+     </article>
+
+  </secction>
+   
+</template>
+
+</body>
 </html>

@@ -34,6 +34,6 @@ export default [
     image: "./image/book1.jpg",
     name: "cas",
     category: "history",
-    price: 300,
+    price: 500,
   },
 ];

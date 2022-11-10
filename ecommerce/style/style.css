@@ -369,3 +369,7 @@ nav {
 .cart-close:hover {
   cursor: pointer;
 }
+
+.single-component:hover {
+  cursor: pointer;
+}

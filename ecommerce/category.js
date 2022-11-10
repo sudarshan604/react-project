@@ -20,6 +20,10 @@ function render(data) {
   catImg.src = data.image;
   const containerId = catComponent.querySelector("[data-id-container]");
 
+  const articleId = catComponent.querySelector("[data-single-component]");
+
+  articleId.dataset.pageId = data.id;
+
   containerId.dataset.itemId = data.id;
 
   const bookName = catComponent.querySelector("[data-book-cat-name]");

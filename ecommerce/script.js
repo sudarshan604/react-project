@@ -27,3 +27,18 @@ toggleButton.addEventListener("click", (e) => {
   invisibleList.classList.remove("hidden");
   invisibleList.classList.toggle("invisible");
 });
+
+function renderSingle() {
+  const singleComponent = document.querySelectorAll("[data-single-component]");
+
+  singleComponent.forEach((cm) => {
+    cm.addEventListener("click", (e) => {
+      window.open("./single.html", "_self");
+
+      const pageId = e.target.closest("[data-single-component]").dataset.pageId;
+      localStorage.setItem("pageId", pageId);
+    });
+  });
+}
+
+renderSingle();
