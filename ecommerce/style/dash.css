@@ -192,3 +192,17 @@ nav div,
   align-self: end;
   padding-top: 18px;
 }
+.dash-link {
+  text-decoration: none;
+}
+.dash-link:visited {
+  text-decoration: none;
+  color: #fff;
+}
+.login-page {
+  text-decoration: none;
+}
+.login a:visited {
+  color: #fff;
+  text-decoration: none;
+}

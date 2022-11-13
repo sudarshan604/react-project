@@ -10,7 +10,7 @@ body {
 .wrap {
   width: 50%;
   margin: 0 auto;
-  margin-top: 400px;
+  margin-top: 100px;
 }
 .section-collection {
   display: flex;
@@ -250,7 +250,37 @@ nav div,
   overflow: auto;
   display: flex;
   gap: 60px;
+  padding-bottom: 50px;
 }
 .related-list div {
   width: 35%;
+}
+.shadow {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.75);
+}
+.related-list::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+.related-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #196388;
+}
+.related-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, red, yellow);
+  border-radius: 10px;
+}
+.dash-link {
+  text-decoration: none;
+}
+.dash-link:visited {
+  text-decoration: none;
+  color: #fff;
+}
+.login-page {
+  text-decoration: none;
+}
+.login a:visited {
+  color: #fff;
+  text-decoration: none;
 }

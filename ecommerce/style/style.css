@@ -6,6 +6,7 @@
 body {
   font-family: sans-serif;
   position: relative;
+  background-color: #eaeded;
 }
 .invisible {
   display: none;
@@ -58,6 +59,7 @@ nav div,
 .book-image {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .book-image img {
   width: 240px;
@@ -379,21 +381,90 @@ nav {
 }
 .book-image {
   justify-content: space-between;
-  border: 2px solid red;
   position: relative;
 }
-.searchbar {
-  height: 20px;
-  border: 2px solid red;
-  width: 100px;
-  position: absolute;
-  top: 50%;
-  left: 60%;
 
-  transform: translate(-50%, -50%);
-}
 .img-heade {
   width: 40%;
   display: flex;
   align-items: center;
+}
+.dash-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.h-icon {
+  margin-bottom: 3px;
+}
+.single-component {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.arrow-down {
+  animation: scroll-down-bounce 1s alternate infinite linear;
+}
+
+@keyframes scroll-down-bounce {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(10px);
+  }
+}
+.searchbar {
+  width: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar input {
+  width: 80%;
+  outline: none;
+  border: none;
+  padding: 12px;
+  padding-left: 10px;
+  background: transparent;
+}
+.search-icon {
+  width: 1.5rem;
+  margin-left: auto;
+  margin-right: 10px;
+}
+.search-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+#search-img {
+  width: 50px;
+  height: 50px;
+}
+.search-h2 {
+  width: 10px;
+  height: 10px;
+  margin-right: 90px;
+}
+.inv {
+  display: none;
+  position: absolute;
+  width: 20px;
+  top: 60%;
+  left: 58%;
+  width: 30rem;
+  z-index: 1;
+  background-color: red;
+}
+.inv:hover {
+  cursor: pointer;
 }

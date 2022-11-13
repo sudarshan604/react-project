@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
     <title>books</title>
-<script type="module" src="./script.js"></script>
-<script type="module" src="./item.js"></script>
+<script type="module" src="./script.js" defer></script>
+<script type="module" src="./item.js" defer></script>
+<script type="module" src="./search.js" defer></script>
 
 </head>
   <body>
     <header>
       <nav>
-        <div>Home
+        <div><a class="dash-link" href="./index.html"> Home
           <svg 
-          class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-
+          class="h-icon icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg> 
+</a>
         </div>
 
         <div>
@@ -77,9 +78,13 @@
           <p>old book store</p>
         </div>
         <div class="searchbar">
-
-        </div>
-        
+             <input data-search type="text" placeholder="search book by name...">
+             <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+        <div class="inv" data-search-content-w>
+           
+          </div>
+            </div>
         </div>
         <div class="home">
           <button id="cardToggle" class="cart-button" data-toggle-button>
@@ -119,7 +124,7 @@
         <img src="image/books.png" />
         <div class="middle-section">
           <p>old books at afforadle price</p>
-          <a href="#"
+          <a href="#dest"
             >shop now
             <svg
               class="arrow-down"
@@ -179,7 +184,7 @@
       </div>
       </section>
 
-      <section class="wrap books-by-category">
+      <section id="dest" class="wrap books-by-category">
         <h3>Books by category</h3>
         <div data-cateory-list class="category-list">
          
@@ -228,8 +233,41 @@
     
 
 </template>
+<template data-search-template>
+<div  data-search-c-id>
+  <div  class="search-content">
+    <img id="search-img" src="./image/book1.jpg" />
+    <h2 class="search-h2" data-h2>name</h2>
+   
+  </div>
+</div>
+</template>
+<script>
 
+  let anchorSelector = 'a[href^="#"]';
+
+  let anchorList =
+      document.querySelectorAll(anchorSelector);
+  
+      console.log(anchorList)
+    anchorList.forEach(link => {
+      link.onclick = function (e) {
+      
+        e.preventDefault();
+  
+          let destination =
+              document.querySelector(this.hash);
+
+          destination.scrollIntoView({
+              behavior: 'smooth'
+          });
+      }
+  });
+</script>
 
 
   </body>
-</html>
+
+
+
+  </html>

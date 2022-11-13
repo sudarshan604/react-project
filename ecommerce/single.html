@@ -11,7 +11,15 @@
   <body>
     <header>
       <nav>
+        <div><a class="dash-link" href="./index.html"> Home
+          <svg 
+          class="h-icon icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg> 
+</a>
+        </div>
+
         <div>
+
+
           <svg
             class="icon"
             fill="none"
@@ -28,9 +36,10 @@
           </svg>
           Email US:
         </div>
-        <div>contact us:</div>
+     
 
         <div class="login-section">
+          <a class="dash-link" href="./dashboard.htm">
           <span
             >account
             <svg
@@ -49,10 +58,14 @@
               />
             </svg>
           </span>
-          <div class="login">
-            <p>login</p>
-            <p>register</p>
-          </div>
+        </a>
+          <div  class="login">
+          
+            <a href="./login.html" class="login-page"> <p>login</p></a>
+             <a href="./login.html" class="login-page"> <p>register</p></a>  
+          
+         </div>      
+    </div>
         </div>
       </nav>
     </header>
@@ -118,7 +131,7 @@
 </template>
 
 <template data-author-template class="same-author">
-  <div class="related-type-book">
+  <div class=" shadow related-type-book">
     <img/>
     <h4 data-same-name class="small-a">by Elena Arthor</h4>
     <span data-s-price class="small-p">NPR.798</span>
@@ -128,7 +141,7 @@
 
 </template>
 <template data-related-template>
-  <div class="related-type-book">
+  <div class="shadow related-type-book">
     <img />
     <p data-related-b class="small-h">The American Expert</p>
     <h4 data-related-name class="small-a">by Elena Arthor</h4>
