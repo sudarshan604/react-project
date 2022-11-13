@@ -53,6 +53,7 @@ function display(seletCategory) {
   catAllBook.innerHTML = " ";
   displayFilter(filterData);
 }
+
 function displayFilter(items) {
   items.forEach(render);
 }

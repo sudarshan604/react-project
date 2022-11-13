@@ -5,6 +5,7 @@
 }
 body {
   font-family: sans-serif;
+  position: relative;
 }
 .invisible {
   display: none;
@@ -372,4 +373,27 @@ nav {
 
 .single-component:hover {
   cursor: pointer;
+}
+.head-section {
+  display: block;
+}
+.book-image {
+  justify-content: space-between;
+  border: 2px solid red;
+  position: relative;
+}
+.searchbar {
+  height: 20px;
+  border: 2px solid red;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+
+  transform: translate(-50%, -50%);
+}
+.img-heade {
+  width: 40%;
+  display: flex;
+  align-items: center;
 }

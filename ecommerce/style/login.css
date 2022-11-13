@@ -16,12 +16,13 @@
 }
 .form-box {
   width: 380px;
-  height: 480px;
+  height: 500px;
   position: relative;
   margin: 6% auto;
   background: #fff;
   overflow: hidden;
   padding-top: 20px solid red;
+  padding-bottom: 100px;
 }
 .btn-box {
   width: 220px;

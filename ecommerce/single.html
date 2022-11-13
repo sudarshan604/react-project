@@ -62,53 +62,14 @@
     </div>
        <section class="wrap related-type">
       <h3 class="author-type-book">more by same author</h3>
-      <div class="book-list">
-      <div class="related-type-book">
-           <img src="https://books.google.com/books/content?id=KPb4zgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"/>
-           <p class="small-h">The American Expert</p>
-           <h4 class="small-a">by Elena Arthor</h4>
-           <span class="small-p">NPR.798</span>
-           <button class="btn-a">Add to cart</button>
-                  
-       </div>  
+      <div data-same-author-List class="book-list">
+  
         </div>
        </section>
   <aside class=" wrap related-one">
    <h3 class="author-type-book-r">Related</h3>
-      <div class="book-list">
-      <div class="related-type-book">
-           <img src="https://books.google.com/books/content?id=KPb4zgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"/>
-           <p class="small-h">The American Expert</p>
-           <h4 class="small-a">by Elena Arthor</h4>
-           <span class="small-p">NPR.798</span>
-           <button class="btn-a">Add to cart</button>
-                  
-       </div> 
+      <div data-related-book class="related-list">
      
-       <div class="related-type-book">
-        <img src="https://books.google.com/books/content?id=KPb4zgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"/>
-        <p class="small-h">The American Expert</p>
-        <h4 class="small-a">by Elena Arthor</h4>
-        <span class="small-p">NPR.798</span>
-        <button class="btn-a">Add to cart</button>
-               
-    </div>   
-    <div class="related-type-book">
-     <img src="https://books.google.com/books/content?id=KPb4zgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"/>
-     <p class="small-h">The American Expert</p>
-     <h4 class="small-a">by Elena Arthor</h4>
-     <span class="small-p">NPR.798</span>
-     <button class="btn-a">Add to cart</button>
-            
- </div>   
- <div class="related-type-book">
-  <img src="https://books.google.com/books/content?id=KPb4zgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"/>
-  <p class="small-h">The American Expert</p>
-  <h4 class="small-a">by Elena Arthor</h4>
-  <span class="small-p">NPR.798</span>
-  <button class="btn-a">Add to cart</button>
-         
-</div>   
         </div>
 
   </aside>
@@ -155,6 +116,28 @@
   </secction>
    
 </template>
+
+<template data-author-template class="same-author">
+  <div class="related-type-book">
+    <img/>
+    <h4 data-same-name class="small-a">by Elena Arthor</h4>
+    <span data-s-price class="small-p">NPR.798</span>
+    <button class="btn-a">Add to cart</button>
+           
+</div>  
+
+</template>
+<template data-related-template>
+  <div class="related-type-book">
+    <img />
+    <p data-related-b class="small-h">The American Expert</p>
+    <h4 data-related-name class="small-a">by Elena Arthor</h4>
+    <span data-r-p class="small-p">NPR.798</span>
+    <button class="btn-a">Add to cart</button>
+           
+</div> 
+
+  </template>>
 
 </body>
 </html>

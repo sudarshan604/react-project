@@ -220,3 +220,37 @@ nav div,
 .read-more:hover {
   cursor: pointer;
 }
+
+.book-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  overflow: auto;
+  padding: 3rem 0px;
+}
+
+.related-type-book {
+  /* border: 2px solid red; */
+  min-width: 23%;
+}
+
+.book-list::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+.book-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #196388;
+}
+.book-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, red, yellow);
+  border-radius: 10px;
+}
+.related-list {
+  overflow: auto;
+  display: flex;
+  gap: 60px;
+}
+.related-list div {
+  width: 35%;
+}
