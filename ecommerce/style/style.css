@@ -6,7 +6,6 @@
 body {
   font-family: sans-serif;
   position: relative;
-  background-color: #eaeded;
 }
 .invisible {
   display: none;
@@ -272,11 +271,12 @@ button {
   width: 100%;
   /* position: absolute; */
   display: grid;
-  gap: 10px;
+  gap: 40px 18px;
   grid-template-columns: repeat(3, 1fr);
 }
 .single-component {
   padding: 10px;
+  background-color: rgba(231, 172, 103, 0.4);
 }
 .single-component img {
   height: 300px;
@@ -424,6 +424,7 @@ nav {
   border: 1px solid #fff;
   display: flex;
   align-items: center;
+  border: 1px solid #c92a2a;
 }
 
 .searchbar input {
@@ -463,7 +464,7 @@ nav {
   left: 58%;
   width: 30rem;
   z-index: 1;
-  background-color: red;
+  background-color: #ffc9c9;
 }
 .inv:hover {
   cursor: pointer;
