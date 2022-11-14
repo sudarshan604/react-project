@@ -283,9 +283,13 @@ button {
   object-fit: cover;
   width: 100%;
 }
-.component-footer p {
+.component-footer p,
+.b {
   margin-top: 10px;
   margin-bottom: 0;
+  color: #495057;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .component-footer div {

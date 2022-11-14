@@ -32,6 +32,7 @@ function renderShoppingCart(id) {
     const item = items.find((i) => i.id == entry.id);
     return sum + item.price * entry.quantity;
   }, 0);
+
   totalPrice.innerText = totalValue;
 }
 

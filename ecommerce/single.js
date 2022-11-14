@@ -71,6 +71,10 @@ function sameAuthorList(data) {
   const authorTemplate = document.querySelector("[ data-author-template");
 
   const newAuthorContent = authorTemplate.content.cloneNode(true);
+  const authC = newAuthorContent.querySelector("[data-cat-f ]");
+  console.log(authC);
+  authC.innerText = data.category;
+
   const authorImg = newAuthorContent.querySelector("img");
 
   authorImg.src = data.image;
@@ -99,6 +103,11 @@ function relatedBook(data) {
   const relatedTemplate = document.querySelector("[data-related-template]");
 
   const relatedContent = relatedTemplate.content.cloneNode(true);
+
+  const authC = relatedContent.querySelector("[data-cat-f ]");
+
+  authC.innerText = data.category;
+
   const authorImg = relatedContent.querySelector("img");
 
   authorImg.src = data.image;

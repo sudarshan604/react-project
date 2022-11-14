@@ -112,16 +112,26 @@ body {
 }
 .small-h {
   margin: 16px 0;
-  font-size: 20px;
+
+  color: #495057;
+  font-size: 2rem;
 }
 .small-a {
   font-weight: 400;
+  color: #495057;
   opacity: 0.7;
+  font-size: 1.2rem;
   margin-bottom: 12px;
 }
 .small-p {
+  color: #495057;
   display: block;
   margin-bottom: 10px;
+}
+.small-c {
+  color: #495057;
+  margin-bottom: 5px;
+  font-size: 1.6rem;
 }
 .btn-a {
   border: 1px solid #3a3a3a;
@@ -135,6 +145,8 @@ body {
 }
 .related-type-book {
   width: 20%;
+  padding: 20px;
+  background-color: rgba(231, 172, 103, 0.4);
 }
 .related-type-book img {
   width: 100%;
@@ -223,7 +235,7 @@ nav div,
 
 .book-list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 50px;
   overflow: auto;
   padding: 3rem 0px;

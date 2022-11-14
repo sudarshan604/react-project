@@ -25,13 +25,14 @@ function render(data) {
   articleId.dataset.pageId = data.id;
 
   containerId.dataset.itemId = data.id;
-
+  const bookCat = catComponent.querySelector("[data-book-cat]");
+  bookCat.innerText = `${data.category}`;
   const bookName = catComponent.querySelector("[data-book-cat-name]");
-  bookName.innerText = data.name;
+  bookName.innerText = `${data.name}`;
 
   const bookPrice = catComponent.querySelector("[ data-book-cat-price]");
 
-  bookPrice.innerText = data.price;
+  bookPrice.innerText = `Rs : ${data.price}`;
 
   catAllBook.appendChild(catComponent);
 }
